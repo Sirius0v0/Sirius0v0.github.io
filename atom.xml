@@ -3,11 +3,11 @@
   <title>Hexo</title>
   
   
-  <link href="/Sirius_Star/atom.xml" rel="self"/>
+  <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="https://sirius_star.gitee.io/"/>
+  <link href="https://sirius_star.gitee.io/blog/"/>
   <updated>2020-05-08T01:21:03.914Z</updated>
-  <id>https://sirius_star.gitee.io/</id>
+  <id>https://sirius_star.gitee.io/blog/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Blog&#39;</title>
-    <link href="https://sirius_star.gitee.io/2020/05/08/Blog/"/>
-    <id>https://sirius_star.gitee.io/2020/05/08/Blog/</id>
+    <link href="https://sirius_star.gitee.io/blog/2020/05/08/Blog/"/>
+    <id>https://sirius_star.gitee.io/blog/2020/05/08/Blog/</id>
     <published>2020-05-08T01:18:15.000Z</published>
     <updated>2020-05-08T01:21:03.914Z</updated>
     
@@ -41,8 +41,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://sirius_star.gitee.io/2020/05/08/hello-world/"/>
-    <id>https://sirius_star.gitee.io/2020/05/08/hello-world/</id>
+    <link href="https://sirius_star.gitee.io/blog/2020/05/08/hello-world/"/>
+    <id>https://sirius_star.gitee.io/blog/2020/05/08/hello-world/</id>
     <published>2020-05-08T00:43:40.653Z</published>
     <updated>2020-05-08T00:43:40.654Z</updated>
     
