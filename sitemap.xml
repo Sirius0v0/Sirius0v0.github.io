@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sirius0v0.gitee.io/about/index.html</loc>
+    
+    <lastmod>2020-05-15T13:08:27.613Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sirius0v0.gitee.io/categories/index.html</loc>
+    
+    <lastmod>2020-05-15T13:08:01.343Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sirius0v0.gitee.io/tags/index.html</loc>
+    
+    <lastmod>2020-05-15T13:07:21.077Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sirius0v0.gitee.io/link/index.html</loc>
+    
+    <lastmod>2020-05-15T13:07:05.002Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sirius0v0.gitee.io/2020/05/14/Python-Study-Notes1/</loc>
     
     <lastmod>2020-05-14T14:45:18.775Z</lastmod>
@@ -23,37 +51,9 @@
   </url>
   
   <url>
-    <loc>https://sirius0v0.gitee.io/categories/index.html</loc>
-    
-    <lastmod>2020-05-10T05:00:40.791Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sirius0v0.gitee.io/about/index.html</loc>
-    
-    <lastmod>2020-05-10T05:00:09.529Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sirius0v0.gitee.io/2020/05/03/%E8%88%AA%E5%A4%A9%E7%B2%BE%E7%A5%9E/</loc>
     
     <lastmod>2020-05-09T11:53:26.935Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sirius0v0.gitee.io/link/index.html</loc>
-    
-    <lastmod>2020-05-09T07:16:40.594Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sirius0v0.gitee.io/tags/index.html</loc>
-    
-    <lastmod>2020-05-09T07:15:47.440Z</lastmod>
     
   </url>
   
