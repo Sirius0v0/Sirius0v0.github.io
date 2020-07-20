@@ -8,7 +8,7 @@
       <link href="/2020/07/20/Python%E5%AD%A6%E4%B9%A0_%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
       <url>/2020/07/20/Python%E5%AD%A6%E4%B9%A0_%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
       
-        <content type="html"><![CDATA[<h1 id="关系运算符"><a class="markdownIt-Anchor" href="#关系运算符"></a> 关系运算符</h1><p>关系运算符整体较为简单，其中有一个现象可以拿出来单独谈一谈~</p><p><code>is</code>和<code>==</code>有何区别？</p><p>下面这个情况该如何解释？？</p><p><img src="https://pic.downk.cc/item/5f15bf0f14195aa5945c0ad1.jpg" alt="神奇的比较" /></p><h2 id="is-和-是什么"><a class="markdownIt-Anchor" href="#is-和-是什么"></a> is 和 == 是什么</h2><ul><li><code>is</code>比较两个对象的<strong>地址</strong>【<code>id()</code>查看】</li><li><code>==</code>比较两个对象的<strong>内容</strong></li></ul><p><img src="https://pic.downk.cc/item/5f15c08c14195aa5945d2956.jpg" alt="解释1" /></p><p>由此可以想通这样的结果的原因，可是下面这个情况是不是又再一次懵逼了？</p><p><img src="https://pic.downk.cc/item/5f15c10114195aa5945d71c9.jpg" alt="懵逼~" /></p><p>别着急，往下看~</p><h2 id="数据池"><a class="markdownIt-Anchor" href="#数据池"></a> 数据池</h2><p>在交互页面中，小整数范围是[-5,256]，在这个范围内的数拥有相同的地址，而大于这个范围的被称为大整数，每次出现（无论数字是否相同）均分配新的地址</p><p>在.py文件中，整个代码均处在同一数据池中，只要内容一样，地址就一样</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">money = <span class="number">20000</span></span><br><span class="line">money1 = <span class="number">20000</span></span><br><span class="line">print(id(money))</span><br><span class="line">print(id(money1))</span><br><span class="line"></span><br><span class="line">age = <span class="number">5</span></span><br><span class="line">age1 = <span class="number">5</span></span><br><span class="line">print(id(age))</span><br><span class="line">print(id(age1))</span><br></pre></td></tr></table></figure><p><img src="https://pic.downk.cc/item/5f15c37514195aa5945f434d.jpg" alt="结果" /></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="关系运算符"><a class="markdownIt-Anchor" href="#关系运算符"></a> 关系运算符</h1><p>关系运算符整体较为简单，其中有一个现象可以拿出来单独谈一谈~</p><p><code>is</code>和<code>==</code>有何区别？</p><p>下面这个情况该如何解释？？</p><p><img src="https://pic.downk.cc/item/5f15bf0f14195aa5945c0ad1.jpg" alt="神奇的比较" /></p><h2 id="is-和-是什么"><a class="markdownIt-Anchor" href="#is-和-是什么"></a> is 和 == 是什么</h2><ul><li><code>is</code>比较两个对象的<strong>地址</strong>【<code>id()</code>查看】</li><li><code>==</code>比较两个对象的<strong>内容</strong></li></ul><p><img src="https://pic.downk.cc/item/5f15c08c14195aa5945d2956.jpg" alt="解释1" /></p><p>由此可以想通这样的结果的原因，可是下面这个情况是不是又再一次懵逼了？</p><p><img src="https://pic.downk.cc/item/5f15c10114195aa5945d71c9.jpg" alt="懵逼~" /></p><p>别着急，往下看~</p><h2 id="数据池"><a class="markdownIt-Anchor" href="#数据池"></a> 数据池</h2><p>在交互页面中，小整数范围是[-5,256]，在这个范围内的数拥有相同的地址，而大于这个范围的被称为大整数，每次出现（无论数字是否相同）均分配新的地址</p><p>在.py文件中，整个代码均处在同一数据池中，只要内容一样，地址就一样</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">money = <span class="number">20000</span></span><br><span class="line">money1 = <span class="number">20000</span></span><br><span class="line">print(id(money))</span><br><span class="line">print(id(money1))</span><br><span class="line"></span><br><span class="line">age = <span class="number">5</span></span><br><span class="line">age1 = <span class="number">5</span></span><br><span class="line">print(id(age))</span><br><span class="line">print(id(age1))</span><br></pre></td></tr></table></figure><p><img src="https://pic.downk.cc/item/5f15c37514195aa5945f434d.jpg" alt="结果" /></p><h1 id="逻辑运算符"><a class="markdownIt-Anchor" href="#逻辑运算符"></a> 逻辑运算符</h1><p><code>and</code>,<code>or</code>,<code>not</code>没啥可说的</p><h1 id="进制转换及位运算符"><a class="markdownIt-Anchor" href="#进制转换及位运算符"></a> 进制转换及位运算符</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 0b  --&gt;  二进制  转二进制bin()</span></span><br><span class="line"><span class="comment"># 0o  --&gt;  八进制  </span></span><br><span class="line"><span class="comment"># 0x  --&gt;  十六进制</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#位运算符有以下几个：</span></span><br><span class="line">​</span><br></pre></td></tr></table></figure><p>&amp; 按位与<br />| 按位或<br />~ 取反<br />^ 异或<br />&lt;&lt; 左移 m&lt;&lt;n即m*2^n</p><blockquote><blockquote><p>右移 m&gt;&gt;n即m//2^n<br />​```</p></blockquote></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 三目运算符</span><br><span class="line"></span><br><span class="line">+ 格式：&#96;表达式真 if 判断 else 表达式假&#96;</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line">result &#x3D; 13579 if 8&gt;10 else 24680</span><br><span class="line">print(result)</span><br><span class="line"></span><br><span class="line">&gt;&gt; 24680</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -128,17 +128,6 @@
     
     
     <entry>
-      <title>about</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>分类</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -150,9 +139,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>about</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -164,6 +153,17 @@
       <title>友情链接</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
