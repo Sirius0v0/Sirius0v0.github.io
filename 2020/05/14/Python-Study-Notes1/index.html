@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python学习_基础语法（一） | Sirius</title><meta name="description" content="本篇非教程篇，是根据笔者自己的学习情况整理出来的小笔记，仅供读者阅读参考哦~             处理字符串    函数名&#x2F;操作 功能 实例     .upper() 全部大写 ‘ada lovelace’.title()  &#x3D;&#x3D;&gt;  ‘ADA LOVELACE’   .lower() 全部小写 ‘ADa loveLAce’.title()  &#x3D;&#x3D;&gt;  ‘"><meta name="keywords" content="Python"><meta name="author" content="卓小腻"><meta name="copyright" content="卓小腻"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/myicon.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Python学习_基础语法（一）"><meta name="twitter:description" content="本篇非教程篇，是根据笔者自己的学习情况整理出来的小笔记，仅供读者阅读参考哦~             处理字符串    函数名&#x2F;操作 功能 实例     .upper() 全部大写 ‘ada lovelace’.title()  &#x3D;&#x3D;&gt;  ‘ADA LOVELACE’   .lower() 全部小写 ‘ADa loveLAce’.title()  &#x3D;&#x3D;&gt;  ‘"><meta name="twitter:image" content="https://pic.downk.cc/item/5ebd41c5c2a9a83be580c9f3.jpg"><meta property="og:type" content="article"><meta property="og:title" content="Python学习_基础语法（一）"><meta property="og:url" content="https://sirius0v0.gitee.io/2020/05/14/Python-Study-Notes1/"><meta property="og:site_name" content="Sirius"><meta property="og:description" content="本篇非教程篇，是根据笔者自己的学习情况整理出来的小笔记，仅供读者阅读参考哦~             处理字符串    函数名&#x2F;操作 功能 实例     .upper() 全部大写 ‘ada lovelace’.title()  &#x3D;&#x3D;&gt;  ‘ADA LOVELACE’   .lower() 全部小写 ‘ADa loveLAce’.title()  &#x3D;&#x3D;&gt;  ‘"><meta property="og:image" content="https://pic.downk.cc/item/5ebd41c5c2a9a83be580c9f3.jpg"><meta property="article:published_time" content="2020-05-14T12:56:01.000Z"><meta property="article:modified_time" content="2020-05-14T14:45:18.775Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python学习_基础语法（一） | Sirius</title><meta name="description" content="本篇非教程篇，是根据笔者自己的学习情况整理出来的小笔记，仅供读者阅读参考哦~             处理字符串  字符串的格式化   format方法 12345678910&#39;&amp;#123;&lt;参数序号&gt; : &lt;格式控制标记&gt;&amp;#125;&#39;.format(&lt;默认参数序号0、1、2&gt;)#格式控制标记：&lt;所填充的字符&gt; &lt;对"><meta name="keywords" content="Python"><meta name="author" content="卓小腻"><meta name="copyright" content="卓小腻"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/myicon.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Python学习_基础语法（一）"><meta name="twitter:description" content="本篇非教程篇，是根据笔者自己的学习情况整理出来的小笔记，仅供读者阅读参考哦~             处理字符串  字符串的格式化   format方法 12345678910&#39;&amp;#123;&lt;参数序号&gt; : &lt;格式控制标记&gt;&amp;#125;&#39;.format(&lt;默认参数序号0、1、2&gt;)#格式控制标记：&lt;所填充的字符&gt; &lt;对"><meta name="twitter:image" content="https://pic.downk.cc/item/5ebd41c5c2a9a83be580c9f3.jpg"><meta property="og:type" content="article"><meta property="og:title" content="Python学习_基础语法（一）"><meta property="og:url" content="https://sirius0v0.gitee.io/2020/05/14/Python-Study-Notes1/"><meta property="og:site_name" content="Sirius"><meta property="og:description" content="本篇非教程篇，是根据笔者自己的学习情况整理出来的小笔记，仅供读者阅读参考哦~             处理字符串  字符串的格式化   format方法 12345678910&#39;&amp;#123;&lt;参数序号&gt; : &lt;格式控制标记&gt;&amp;#125;&#39;.format(&lt;默认参数序号0、1、2&gt;)#格式控制标记：&lt;所填充的字符&gt; &lt;对"><meta property="og:image" content="https://pic.downk.cc/item/5ebd41c5c2a9a83be580c9f3.jpg"><meta property="article:published_time" content="2020-05-14T12:56:01.000Z"><meta property="article:modified_time" content="2020-07-25T03:21:23.432Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
 var t = Cookies.get("theme")
 if (autoChangeMode == '1'){
   var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -84,10 +84,24 @@ function activateLightMode(){
   opacity: 1
 }
 </style></noscript><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Sirius" type="application/atom+xml">
-</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">4</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-comment"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#处理字符串"><span class="toc-number">1.</span> <span class="toc-text"> 处理字符串</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#处理列表"><span class="toc-number">2.</span> <span class="toc-text"> 处理列表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加元素"><span class="toc-number">2.1.</span> <span class="toc-text"> 添加元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除元素"><span class="toc-number">2.2.</span> <span class="toc-text"> 删除元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组织列表"><span class="toc-number">2.3.</span> <span class="toc-text"> 组织列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#操作数字"><span class="toc-number">2.4.</span> <span class="toc-text"> 操作数字</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组合数据类型的处理"><span class="toc-number">3.</span> <span class="toc-text"> 组合数据类型的处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#集合类型"><span class="toc-number">3.1.</span> <span class="toc-text"> 集合类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#处理集合的方法"><span class="toc-number">3.1.1.</span> <span class="toc-text"> 处理集合的方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#序列类型"><span class="toc-number">3.2.</span> <span class="toc-text"> 序列类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#补充方法"><span class="toc-number">3.2.1.</span> <span class="toc-text"> 补充方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元组类型"><span class="toc-number">3.3.</span> <span class="toc-text"> 元组类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字典类型"><span class="toc-number">3.4.</span> <span class="toc-text"> 字典类型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他函数"><span class="toc-number">4.</span> <span class="toc-text"> 其他函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他杂项"><span class="toc-number">5.</span> <span class="toc-text"> 其他杂项</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#引入和调用库"><span class="toc-number">5.1.</span> <span class="toc-text"> 引入和调用库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#条件结构"><span class="toc-number">5.2.</span> <span class="toc-text"> 条件结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常处理"><span class="toc-number">5.3.</span> <span class="toc-text"> 异常处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#循环的拓展"><span class="toc-number">5.4.</span> <span class="toc-text"> 循环的拓展</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><div class="post-bg" id="nav" style="background-image: url(https://pic.downk.cc/item/5ebd3f9ec2a9a83be57e2d0e.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Sirius</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-comment"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">Python学习_基础语法（一）</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-05-14 20:56:01"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-05-14</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-05-14 22:45:18"><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-05-14</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><i class="fa fa-angle-right post-meta__separator" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Python/">Python</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>字数总计:</span><span class="word-count">1.4k</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>阅读时长: 5 分钟</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><div class="note info">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">4</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-comment"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#处理字符串"><span class="toc-number">1.</span> <span class="toc-text"> 处理字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串的格式化"><span class="toc-number">1.1.</span> <span class="toc-text"> 字符串的格式化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算与索引提取"><span class="toc-number">1.2.</span> <span class="toc-text"> 运算与索引提取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进制与编码"><span class="toc-number">1.3.</span> <span class="toc-text"> 进制与编码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#与大小写有关"><span class="toc-number">1.4.</span> <span class="toc-text"> 与大小写有关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#拆分合并"><span class="toc-number">1.5.</span> <span class="toc-text"> 拆分合并</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查找-替换字符串内容"><span class="toc-number">1.6.</span> <span class="toc-text"> 查找、替换字符串内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#与判断相关"><span class="toc-number">1.7.</span> <span class="toc-text"> 与判断相关</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#处理列表"><span class="toc-number">2.</span> <span class="toc-text"> 处理列表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加元素"><span class="toc-number">2.1.</span> <span class="toc-text"> 添加元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除元素"><span class="toc-number">2.2.</span> <span class="toc-text"> 删除元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组织列表"><span class="toc-number">2.3.</span> <span class="toc-text"> 组织列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#操作数字"><span class="toc-number">2.4.</span> <span class="toc-text"> 操作数字</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组合数据类型的处理"><span class="toc-number">3.</span> <span class="toc-text"> 组合数据类型的处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#集合类型"><span class="toc-number">3.1.</span> <span class="toc-text"> 集合类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#处理集合的方法"><span class="toc-number">3.1.1.</span> <span class="toc-text"> 处理集合的方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#序列类型"><span class="toc-number">3.2.</span> <span class="toc-text"> 序列类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#补充方法"><span class="toc-number">3.2.1.</span> <span class="toc-text"> 补充方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元组类型"><span class="toc-number">3.3.</span> <span class="toc-text"> 元组类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字典类型"><span class="toc-number">3.4.</span> <span class="toc-text"> 字典类型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他函数"><span class="toc-number">4.</span> <span class="toc-text"> 其他函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他杂项"><span class="toc-number">5.</span> <span class="toc-text"> 其他杂项</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#引入和调用库"><span class="toc-number">5.1.</span> <span class="toc-text"> 引入和调用库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#条件结构"><span class="toc-number">5.2.</span> <span class="toc-text"> 条件结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常处理"><span class="toc-number">5.3.</span> <span class="toc-text"> 异常处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#循环的拓展"><span class="toc-number">5.4.</span> <span class="toc-text"> 循环的拓展</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><div class="post-bg" id="nav" style="background-image: url(https://pic.downk.cc/item/5ebd3f9ec2a9a83be57e2d0e.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Sirius</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-comment"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">Python学习_基础语法（一）</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-05-14 20:56:01"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-05-14</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-07-25 11:21:23"><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-07-25</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><i class="fa fa-angle-right post-meta__separator" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Python/">Python</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>字数总计:</span><span class="word-count">1.7k</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>阅读时长: 6 分钟</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><div class="note info">
             <p>本篇非教程篇，是根据笔者自己的学习情况整理出来的小笔记，仅供读者阅读参考哦~</p>
           </div>
 <h1 id="处理字符串"><a class="markdownIt-Anchor" href="#处理字符串"></a> 处理字符串</h1>
+<h2 id="字符串的格式化"><a class="markdownIt-Anchor" href="#字符串的格式化"></a> 字符串的格式化</h2>
+<ul>
+<li>
+<p>format方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'&#123;&lt;参数序号&gt; : &lt;格式控制标记&gt;&#125;'</span>.format(&lt;默认参数序号<span class="number">0</span>、<span class="number">1</span>、<span class="number">2</span>&gt;)</span><br><span class="line"><span class="comment">#格式控制标记：&lt;所填充的字符&gt; &lt;对齐方式&gt; &lt;宽度&gt; &lt;,&gt; &lt;.精度&gt; &lt;类型&gt; </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#说明：&lt;对齐&gt;：① &lt; 左对齐 ② &gt; 右对齐 ③ ^ 居中对齐</span></span><br><span class="line"><span class="comment">#	  &lt;,&gt;：	数字的千位分隔符</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;0:=^20&#125;'</span>.format(<span class="string">'python'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;0:*&gt;20&#125;'</span>.format(<span class="string">'bit'</span>)</span><br><span class="line"><span class="string">'=======python======='</span></span><br><span class="line"><span class="string">'*****************bit'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>%方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">username = xiaohong</span><br><span class="line">PIN = <span class="number">123456</span></span><br><span class="line"><span class="string">'username:%s'</span> % (username)</span><br><span class="line"><span class="string">'PIN:%d'</span> % (PIN)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="运算与索引提取"><a class="markdownIt-Anchor" href="#运算与索引提取"></a> 运算与索引提取</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="string">'I'</span></span><br><span class="line">y = <span class="string">'love'</span></span><br><span class="line">z = <span class="string">'u'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">####	【运算】</span></span><br><span class="line"><span class="comment">#连接'+'</span></span><br><span class="line">sentence = x + <span class="string">' '</span> + y + <span class="string">' '</span> + z</span><br><span class="line">print(sentence)		<span class="comment">#'I love u'</span></span><br><span class="line"><span class="comment">#复制'*'</span></span><br><span class="line">copy = x*<span class="number">3</span></span><br><span class="line">print(copy)			<span class="comment">#'III'</span></span><br><span class="line"><span class="comment">#判断子串'in'</span></span><br><span class="line">print(x <span class="keyword">in</span> sentence)	<span class="comment">#True</span></span><br><span class="line"></span><br><span class="line"><span class="comment">###		【索引】</span></span><br><span class="line">print(sentence[<span class="number">3</span>])		<span class="comment"># o</span></span><br><span class="line">print(sentence[<span class="number">2</span>:<span class="number">5</span>])	<span class="comment"># lov          【左闭右开】</span></span><br><span class="line">print(sentence[::<span class="number">-1</span>])	<span class="comment"># u evol I</span></span><br><span class="line">print(sentence[<span class="number">5</span>:<span class="number">2</span>:<span class="number">-1</span>])	<span class="comment"># evo          【左闭右开】</span></span><br></pre></td></tr></table></figure>
+<h2 id="进制与编码"><a class="markdownIt-Anchor" href="#进制与编码"></a> 进制与编码</h2>
 <table>
 <thead>
 <tr>
@@ -98,93 +112,8 @@ function activateLightMode(){
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">.upper()</td>
-<td style="text-align:center">全部大写</td>
-<td style="text-align:center">‘ada lovelace’.title()  ==&gt;  ‘ADA LOVELACE’</td>
-</tr>
-<tr>
-<td style="text-align:center">.lower()</td>
-<td style="text-align:center">全部小写</td>
-<td style="text-align:center">‘ADa loveLAce’.title()  ==&gt;  ‘ada Lovelace’</td>
-</tr>
-<tr>
-<td style="text-align:center">.title()</td>
-<td style="text-align:center">首字母大写</td>
-<td style="text-align:center">‘ada lovelace’.title()  ==&gt;  ‘Ada Lovelace’</td>
-</tr>
-<tr>
-<td style="text-align:center">.strip(chars)</td>
-<td style="text-align:center">删除左右chars字符</td>
-<td style="text-align:center">‘= python=’.strip(’ =np’)  ==&gt;  ‘ytho’</td>
-</tr>
-<tr>
-<td style="text-align:center">.strip()</td>
-<td style="text-align:center">删除左右空白</td>
-<td style="text-align:center">’  Hello World   '.strip()  ==&gt;  ‘Hello World’</td>
-</tr>
-<tr>
-<td style="text-align:center">.rstrip()</td>
-<td style="text-align:center">删除右边空白</td>
-<td style="text-align:center">’  Hello World   ‘.rstrip()  ==&gt;  ’  Hello World’</td>
-</tr>
-<tr>
-<td style="text-align:center">.lstrip()</td>
-<td style="text-align:center">删除左边空白</td>
-<td style="text-align:center">’  Hello World   '.lstrip()  ==&gt;  'Hello World   ’</td>
-</tr>
-<tr>
-<td style="text-align:center">.split(sep)</td>
-<td style="text-align:center">按照sep进行分割为列表</td>
-<td style="text-align:center">‘I love u’.split()  ==&gt;  [‘I’,‘love’,‘u’]</td>
-</tr>
-<tr>
-<td style="text-align:center">.count(sub)</td>
-<td style="text-align:center">统计字符串sub次数</td>
-<td style="text-align:center">‘an apple a day’.count(‘a’)  ==&gt;  4</td>
-</tr>
-<tr>
-<td style="text-align:center">.replace(old , new)</td>
-<td style="text-align:center">替换字符串</td>
-<td style="text-align:center">‘an apple’.replace(‘a’,‘e’)  ==&gt; ‘en epple’</td>
-</tr>
-<tr>
-<td style="text-align:center">.center(width[,fillchar])</td>
-<td style="text-align:center">居中并填充</td>
-<td style="text-align:center">‘python’.center(10,’=’) ==&gt; ‘==python==’</td>
-</tr>
-<tr>
-<td style="text-align:center">.join(iter)</td>
-<td style="text-align:center">在iter每个元素之间添加字符</td>
-<td style="text-align:center">‘=’.join(‘123’)  ==&gt;  ‘1=2=3’</td>
-</tr>
-<tr>
-<td style="text-align:center"><string>[::-1]</td>
-<td style="text-align:center">字符串逆序</td>
-<td style="text-align:center">‘0123456789’[::-1]  ==&gt;  ‘9876543210’</td>
-</tr>
-<tr>
-<td style="text-align:center">x + y</td>
-<td style="text-align:center">连接字符串</td>
-<td style="text-align:center">‘I love’ + ‘you’  ==&gt;  ‘I love you’</td>
-</tr>
-<tr>
-<td style="text-align:center">x * n</td>
-<td style="text-align:center">复制n次字符串x</td>
-<td style="text-align:center">'you ’ * 3  ==&gt;  'you you you ’</td>
-</tr>
-<tr>
-<td style="text-align:center">x in s</td>
-<td style="text-align:center">判断x是否为s的子串</td>
-<td style="text-align:center">‘I’ in ‘I love you’  ==&gt;  True</td>
-</tr>
-<tr>
-<td style="text-align:center">len(字符、列表、元组等)</td>
-<td style="text-align:center">返回对象长度</td>
-<td style="text-align:center">len([‘23’,‘awf’,‘3fs’,‘sdfsf’])  ==&gt;  4</td>
-</tr>
-<tr>
-<td style="text-align:center">hex(x)或oct(x)</td>
-<td style="text-align:center">16、8进制转换(int to str)</td>
+<td style="text-align:center">bin(x)或hex(x)或oct(x)</td>
+<td style="text-align:center">2、16、8进制转换(int to str)</td>
 <td style="text-align:center">hex(1234)  ==&gt;  ‘ox4d2’</td>
 </tr>
 <tr>
@@ -197,14 +126,196 @@ function activateLightMode(){
 <td style="text-align:center">返回字符对应的Unicode</td>
 <td style="text-align:center">chr(‘°’)  ==&gt;  176</td>
 </tr>
+<tr>
+<td style="text-align:center">str.encode(‘编码’)</td>
+<td style="text-align:center">编码</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">str.decode(‘编码’)</td>
+<td style="text-align:center">解码</td>
+<td style="text-align:center"></td>
+</tr>
 </tbody>
 </table>
-<ul>
-<li>
-<p>format方法</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'&#123;&lt;参数序号&gt; : &lt;格式控制标记&gt;&#125;'</span>.format(&lt;默认参数序号<span class="number">0</span>、<span class="number">1</span>、<span class="number">2</span>&gt;)</span><br><span class="line"><span class="comment">#格式控制标记：&lt;所填充的字符&gt; &lt;对齐方式&gt; &lt;宽度&gt; &lt;,&gt; &lt;.精度&gt; &lt;类型&gt; </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#说明：&lt;对齐&gt;：① &lt; 左对齐 ② &gt; 右对齐 ③ ^ 居中对齐</span></span><br><span class="line"><span class="comment">#	  &lt;,&gt;：	数字的千位分隔符</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;0:=^20&#125;'</span>.format(<span class="string">'python'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'&#123;0:*&gt;20&#125;'</span>.format(<span class="string">'bit'</span>)</span><br><span class="line"><span class="string">'=======python======='</span></span><br><span class="line"><span class="string">'*****************bit'</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+<h2 id="与大小写有关"><a class="markdownIt-Anchor" href="#与大小写有关"></a> 与大小写有关</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名/操作</th>
+<th style="text-align:center">功能</th>
+<th style="text-align:center">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">str.upper()</td>
+<td style="text-align:center">全部大写</td>
+<td style="text-align:center">‘ada lovelace’.upper() ==&gt;  ‘ADA LOVELACE’</td>
+</tr>
+<tr>
+<td style="text-align:center">str.lower()</td>
+<td style="text-align:center">全部小写</td>
+<td style="text-align:center">‘ADa loveLAce’.lower()  ==&gt;  ‘ada Lovelace’</td>
+</tr>
+<tr>
+<td style="text-align:center">str.title()</td>
+<td style="text-align:center">首字母大写</td>
+<td style="text-align:center">‘ada lovelace’.title()  ==&gt;  ‘Ada Lovelace’</td>
+</tr>
+<tr>
+<td style="text-align:center">str.capitalize()</td>
+<td style="text-align:center">第一个字符转换为大写</td>
+<td style="text-align:center">‘how are u’.capitalize() ==&gt; ‘How are u’</td>
+</tr>
+</tbody>
+</table>
+<h2 id="拆分合并"><a class="markdownIt-Anchor" href="#拆分合并"></a> 拆分合并</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名/操作</th>
+<th style="text-align:center">功能</th>
+<th style="text-align:center">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">str.join(iter)</td>
+<td style="text-align:center">在iter每个元素之间添加字符</td>
+<td style="text-align:center">‘=’.join(‘123’)  ==&gt;  ‘1=2=3’</td>
+</tr>
+<tr>
+<td style="text-align:center">str.strip(chars)</td>
+<td style="text-align:center">删除左右chars字符</td>
+<td style="text-align:center">‘= python=’.strip(’= np’)  ==&gt;  ‘ytho’</td>
+</tr>
+<tr>
+<td style="text-align:center">str.rstrip()</td>
+<td style="text-align:center">删除右边空白</td>
+<td style="text-align:center">’  Hello World   ‘.rstrip()  ==&gt;  ’  Hello World’</td>
+</tr>
+<tr>
+<td style="text-align:center">str.lstrip()</td>
+<td style="text-align:center">删除左边空白</td>
+<td style="text-align:center">’  Hello World   '.lstrip()  ==&gt;  'Hello World   ’</td>
+</tr>
+<tr>
+<td style="text-align:center">str.strip()</td>
+<td style="text-align:center">删除左右空白</td>
+<td style="text-align:center">’  Hello World   '.strip()  ==&gt;  ‘Hello World’</td>
+</tr>
+<tr>
+<td style="text-align:center">str.split(sep)</td>
+<td style="text-align:center">按照sep进行分割为列表</td>
+<td style="text-align:center">‘I love u’.split()  ==&gt;  [‘I’,‘love’,‘u’]</td>
+</tr>
+<tr>
+<td style="text-align:center">.center(width[,fillchar])</td>
+<td style="text-align:center">居中并填充</td>
+<td style="text-align:center">‘python’.center(10,’=’) ==&gt; ‘==python==’</td>
+</tr>
+</tbody>
+</table>
+<h2 id="查找-替换字符串内容"><a class="markdownIt-Anchor" href="#查找-替换字符串内容"></a> 查找、替换字符串内容</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名/操作</th>
+<th style="text-align:center">功能</th>
+<th style="text-align:center">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">str.find(‘xx’[,start,end])</td>
+<td style="text-align:center">查找字符串</td>
+<td style="text-align:center">‘an apple’.find(‘a’)  ==&gt;  0</td>
+</tr>
+<tr>
+<td style="text-align:center">str.rfind()</td>
+<td style="text-align:center">(从右查找)</td>
+<td style="text-align:center">‘an apple’.rfind(‘a’)  ==&gt;  3</td>
+</tr>
+<tr>
+<td style="text-align:center">str.lfind()</td>
+<td style="text-align:center">（从左查找）</td>
+<td style="text-align:center">略</td>
+</tr>
+<tr>
+<td style="text-align:center">str.index()</td>
+<td style="text-align:center">（找不到报错）</td>
+<td style="text-align:center">略</td>
+</tr>
+<tr>
+<td style="text-align:center">str.rindex()</td>
+<td style="text-align:center">略</td>
+<td style="text-align:center">略</td>
+</tr>
+<tr>
+<td style="text-align:center">str.lindex()</td>
+<td style="text-align:center">略</td>
+<td style="text-align:center">略</td>
+</tr>
+<tr>
+<td style="text-align:center">str.replace(old , new)</td>
+<td style="text-align:center">替换字符串</td>
+<td style="text-align:center">‘an apple’.replace(‘a’,‘e’)  ==&gt; ‘en epple’</td>
+</tr>
+</tbody>
+</table>
+<h2 id="与判断相关"><a class="markdownIt-Anchor" href="#与判断相关"></a> 与判断相关</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名/操作</th>
+<th style="text-align:center">功能</th>
+<th style="text-align:center">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">str.startswith(‘str1’)</td>
+<td style="text-align:center">判断str是否以str1开头</td>
+<td style="text-align:center">‘filename.doc’.startswith(‘File’) ==&gt; False</td>
+</tr>
+<tr>
+<td style="text-align:center">str.endswith(‘str2’)</td>
+<td style="text-align:center">判断str是否以str2结尾</td>
+<td style="text-align:center">‘filename.doc’.endswith(‘txt’) ==&gt; False</td>
+</tr>
+<tr>
+<td style="text-align:center">str.isalpha()</td>
+<td style="text-align:center">判断是否是字母</td>
+<td style="text-align:center">‘abcd6’.isalpha() ==&gt; False</td>
+</tr>
+<tr>
+<td style="text-align:center">str.isdigit()</td>
+<td style="text-align:center">判断是否是数字</td>
+<td style="text-align:center">‘2342’.isdigit() ==&gt; True</td>
+</tr>
+<tr>
+<td style="text-align:center">str.istitle()</td>
+<td style="text-align:center">判断是否为标题式字符串</td>
+<td style="text-align:center">‘Title Good’.istitle() ==&gt; True</td>
+</tr>
+<tr>
+<td style="text-align:center">str.isupper()</td>
+<td style="text-align:center">判断是否都为大写</td>
+<td style="text-align:center">‘ABCD’.isupper() ==&gt; True</td>
+</tr>
+<tr>
+<td style="text-align:center">len(字符、列表、元组等)</td>
+<td style="text-align:center">返回对象长度</td>
+<td style="text-align:center">len([‘23’,‘awf’,‘3fs’,‘sdfsf’])  ==&gt;  4</td>
+</tr>
+<tr>
+<td style="text-align:center">str.count(sub)</td>
+<td style="text-align:center">统计字符串sub次数</td>
+<td style="text-align:center">‘an apple a day’.count(‘a’)  ==&gt;  4</td>
+</tr>
+</tbody>
+</table>
 <h1 id="处理列表"><a class="markdownIt-Anchor" href="#处理列表"></a> 处理列表</h1>
 <h2 id="添加元素"><a class="markdownIt-Anchor" href="#添加元素"></a> 添加元素</h2>
 <table>
