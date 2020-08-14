@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python学习_基础语法（一） | Sirius</title><meta name="description" content="本篇非教程篇，是根据笔者自己的学习情况整理出来的小笔记，仅供读者阅读参考哦~             处理字符串  字符串的格式化   format方法 12345678910&#39;&amp;#123;&lt;参数序号&gt; : &lt;格式控制标记&gt;&amp;#125;&#39;.format(&lt;默认参数序号0、1、2&gt;)#格式控制标记：&lt;所填充的字符&gt; &lt;对"><meta name="keywords" content="Python"><meta name="author" content="卓小腻"><meta name="copyright" content="卓小腻"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/myicon.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Python学习_基础语法（一）"><meta name="twitter:description" content="本篇非教程篇，是根据笔者自己的学习情况整理出来的小笔记，仅供读者阅读参考哦~             处理字符串  字符串的格式化   format方法 12345678910&#39;&amp;#123;&lt;参数序号&gt; : &lt;格式控制标记&gt;&amp;#125;&#39;.format(&lt;默认参数序号0、1、2&gt;)#格式控制标记：&lt;所填充的字符&gt; &lt;对"><meta name="twitter:image" content="https://pic.downk.cc/item/5ebd41c5c2a9a83be580c9f3.jpg"><meta property="og:type" content="article"><meta property="og:title" content="Python学习_基础语法（一）"><meta property="og:url" content="https://sirius0v0.gitee.io/2020/05/14/Python-Study-Notes1/"><meta property="og:site_name" content="Sirius"><meta property="og:description" content="本篇非教程篇，是根据笔者自己的学习情况整理出来的小笔记，仅供读者阅读参考哦~             处理字符串  字符串的格式化   format方法 12345678910&#39;&amp;#123;&lt;参数序号&gt; : &lt;格式控制标记&gt;&amp;#125;&#39;.format(&lt;默认参数序号0、1、2&gt;)#格式控制标记：&lt;所填充的字符&gt; &lt;对"><meta property="og:image" content="https://pic.downk.cc/item/5ebd41c5c2a9a83be580c9f3.jpg"><meta property="article:published_time" content="2020-05-14T12:56:01.000Z"><meta property="article:modified_time" content="2020-07-25T16:37:44.517Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python学习_基础语法（一） | Sirius</title><meta name="description" content="本篇非教程篇，是根据笔者自己的学习情况整理出来的小笔记，仅供读者阅读参考哦~             处理字符串  字符串的格式化   format方法 12345678910&#39;&amp;#123;&lt;参数序号&gt; : &lt;格式控制标记&gt;&amp;#125;&#39;.format(&lt;默认参数序号0、1、2&gt;)#格式控制标记：&lt;所填充的字符&gt; &lt;对"><meta name="keywords" content="Python"><meta name="author" content="卓小腻"><meta name="copyright" content="卓小腻"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/myicon.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Python学习_基础语法（一）"><meta name="twitter:description" content="本篇非教程篇，是根据笔者自己的学习情况整理出来的小笔记，仅供读者阅读参考哦~             处理字符串  字符串的格式化   format方法 12345678910&#39;&amp;#123;&lt;参数序号&gt; : &lt;格式控制标记&gt;&amp;#125;&#39;.format(&lt;默认参数序号0、1、2&gt;)#格式控制标记：&lt;所填充的字符&gt; &lt;对"><meta name="twitter:image" content="https://pic.downk.cc/item/5ebd41c5c2a9a83be580c9f3.jpg"><meta property="og:type" content="article"><meta property="og:title" content="Python学习_基础语法（一）"><meta property="og:url" content="https://sirius0v0.gitee.io/2020/05/14/Python-Study-Notes1/"><meta property="og:site_name" content="Sirius"><meta property="og:description" content="本篇非教程篇，是根据笔者自己的学习情况整理出来的小笔记，仅供读者阅读参考哦~             处理字符串  字符串的格式化   format方法 12345678910&#39;&amp;#123;&lt;参数序号&gt; : &lt;格式控制标记&gt;&amp;#125;&#39;.format(&lt;默认参数序号0、1、2&gt;)#格式控制标记：&lt;所填充的字符&gt; &lt;对"><meta property="og:image" content="https://pic.downk.cc/item/5ebd41c5c2a9a83be580c9f3.jpg"><meta property="article:published_time" content="2020-05-14T12:56:01.000Z"><meta property="article:modified_time" content="2020-08-14T13:18:21.447Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
 var t = Cookies.get("theme")
 if (autoChangeMode == '1'){
   var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -84,7 +84,7 @@ function activateLightMode(){
   opacity: 1
 }
 </style></noscript><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Sirius" type="application/atom+xml">
-</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">4</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-comment"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#处理字符串"><span class="toc-number">1.</span> <span class="toc-text"> 处理字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串的格式化"><span class="toc-number">1.1.</span> <span class="toc-text"> 字符串的格式化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算与索引提取"><span class="toc-number">1.2.</span> <span class="toc-text"> 运算与索引提取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进制与编码"><span class="toc-number">1.3.</span> <span class="toc-text"> 进制与编码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#与大小写有关"><span class="toc-number">1.4.</span> <span class="toc-text"> 与大小写有关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#拆分合并"><span class="toc-number">1.5.</span> <span class="toc-text"> 拆分合并</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查找-替换字符串内容"><span class="toc-number">1.6.</span> <span class="toc-text"> 查找、替换字符串内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#与判断相关"><span class="toc-number">1.7.</span> <span class="toc-text"> 与判断相关</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#处理列表"><span class="toc-number">2.</span> <span class="toc-text"> 处理列表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加元素"><span class="toc-number">2.1.</span> <span class="toc-text"> 添加元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除元素"><span class="toc-number">2.2.</span> <span class="toc-text"> 删除元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组织列表"><span class="toc-number">2.3.</span> <span class="toc-text"> 组织列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#操作数字"><span class="toc-number">2.4.</span> <span class="toc-text"> 操作数字</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组合数据类型的处理"><span class="toc-number">3.</span> <span class="toc-text"> 组合数据类型的处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#集合类型"><span class="toc-number">3.1.</span> <span class="toc-text"> 集合类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#处理集合的方法"><span class="toc-number">3.1.1.</span> <span class="toc-text"> 处理集合的方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#序列类型"><span class="toc-number">3.2.</span> <span class="toc-text"> 序列类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#补充方法"><span class="toc-number">3.2.1.</span> <span class="toc-text"> 补充方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元组类型"><span class="toc-number">3.3.</span> <span class="toc-text"> 元组类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字典类型"><span class="toc-number">3.4.</span> <span class="toc-text"> 字典类型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他函数"><span class="toc-number">4.</span> <span class="toc-text"> 其他函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他杂项"><span class="toc-number">5.</span> <span class="toc-text"> 其他杂项</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#引入和调用库"><span class="toc-number">5.1.</span> <span class="toc-text"> 引入和调用库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#条件结构"><span class="toc-number">5.2.</span> <span class="toc-text"> 条件结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常处理"><span class="toc-number">5.3.</span> <span class="toc-text"> 异常处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#循环的拓展"><span class="toc-number">5.4.</span> <span class="toc-text"> 循环的拓展</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><div class="post-bg" id="nav" style="background-image: url(https://pic.downk.cc/item/5ebd3f9ec2a9a83be57e2d0e.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Sirius</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-comment"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">Python学习_基础语法（一）</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-05-14 20:56:01"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-05-14</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-07-26 00:37:44"><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-07-26</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><i class="fa fa-angle-right post-meta__separator" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Python/">Python</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>字数总计:</span><span class="word-count">1.7k</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>阅读时长: 6 分钟</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><div class="note info">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">4</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-comment"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#处理字符串"><span class="toc-number">1.</span> <span class="toc-text"> 处理字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串的格式化"><span class="toc-number">1.1.</span> <span class="toc-text"> 字符串的格式化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算与索引提取"><span class="toc-number">1.2.</span> <span class="toc-text"> 运算与索引提取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进制与编码"><span class="toc-number">1.3.</span> <span class="toc-text"> 进制与编码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#与大小写有关"><span class="toc-number">1.4.</span> <span class="toc-text"> 与大小写有关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#拆分合并"><span class="toc-number">1.5.</span> <span class="toc-text"> 拆分合并</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查找-替换字符串内容"><span class="toc-number">1.6.</span> <span class="toc-text"> 查找、替换字符串内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#与判断相关"><span class="toc-number">1.7.</span> <span class="toc-text"> 与判断相关</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#处理列表"><span class="toc-number">2.</span> <span class="toc-text"> 处理列表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加元素"><span class="toc-number">2.1.</span> <span class="toc-text"> 添加元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除元素"><span class="toc-number">2.2.</span> <span class="toc-text"> 删除元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组织列表"><span class="toc-number">2.3.</span> <span class="toc-text"> 组织列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#统计相关"><span class="toc-number">2.4.</span> <span class="toc-text"> 统计相关</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组合数据类型的处理"><span class="toc-number">3.</span> <span class="toc-text"> 组合数据类型的处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#集合类型"><span class="toc-number">3.1.</span> <span class="toc-text"> 集合类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#声明集合"><span class="toc-number">3.1.1.</span> <span class="toc-text"> 声明集合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作集合之增"><span class="toc-number">3.1.2.</span> <span class="toc-text"> 操作集合之增</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作集合之删"><span class="toc-number">3.1.3.</span> <span class="toc-text"> 操作集合之删</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#操作集合之改"><span class="toc-number">3.1.4.</span> <span class="toc-text"> 操作集合之改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#处理集合的方法"><span class="toc-number">3.1.5.</span> <span class="toc-text"> 处理集合的方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#序列类型"><span class="toc-number">3.2.</span> <span class="toc-text"> 序列类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#补充方法"><span class="toc-number">3.2.1.</span> <span class="toc-text"> 补充方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元组类型"><span class="toc-number">3.3.</span> <span class="toc-text"> 元组类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#可迭代类型的拆包与装包"><span class="toc-number">3.3.1.</span> <span class="toc-text"> 可迭代类型的拆包与装包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字典类型"><span class="toc-number">3.4.</span> <span class="toc-text"> 字典类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#增加与更改元素"><span class="toc-number">3.4.1.</span> <span class="toc-text"> 增加与更改元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字典的查找判断"><span class="toc-number">3.4.2.</span> <span class="toc-text"> 字典的查找判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字典中的删除"><span class="toc-number">3.4.3.</span> <span class="toc-text"> 字典中的删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字典中的其他内置函数"><span class="toc-number">3.4.4.</span> <span class="toc-text"> 字典中的其他内置函数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他函数"><span class="toc-number">4.</span> <span class="toc-text"> 其他函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#操作数字"><span class="toc-number">4.1.</span> <span class="toc-text"> 操作数字</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他杂项"><span class="toc-number">5.</span> <span class="toc-text"> 其他杂项</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#引入和调用库"><span class="toc-number">5.1.</span> <span class="toc-text"> 引入和调用库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#条件结构"><span class="toc-number">5.2.</span> <span class="toc-text"> 条件结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常处理"><span class="toc-number">5.3.</span> <span class="toc-text"> 异常处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#循环的拓展"><span class="toc-number">5.4.</span> <span class="toc-text"> 循环的拓展</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><div class="post-bg" id="nav" style="background-image: url(https://pic.downk.cc/item/5ebd3f9ec2a9a83be57e2d0e.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Sirius</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-comment"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">Python学习_基础语法（一）</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-05-14 20:56:01"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-05-14</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-08-14 21:18:21"><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-08-14</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><i class="fa fa-angle-right post-meta__separator" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Python/">Python</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>字数总计:</span><span class="word-count">2.3k</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>阅读时长: 9 分钟</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><div class="note info">
             <p>本篇非教程篇，是根据笔者自己的学习情况整理出来的小笔记，仅供读者阅读参考哦~</p>
           </div>
 <h1 id="处理字符串"><a class="markdownIt-Anchor" href="#处理字符串"></a> 处理字符串</h1>
@@ -366,6 +366,10 @@ function activateLightMode(){
 <td style="text-align:center">.remove(‘string’)</td>
 <td style="text-align:center">已知元素的值 ‘string’ 时</td>
 </tr>
+<tr>
+<td style="text-align:center">.clear()</td>
+<td style="text-align:center">清除所有元素</td>
+</tr>
 </tbody>
 </table>
 <h2 id="组织列表"><a class="markdownIt-Anchor" href="#组织列表"></a> 组织列表</h2>
@@ -388,6 +392,252 @@ function activateLightMode(){
 <tr>
 <td style="text-align:center">.reverse()</td>
 <td style="text-align:center"><strong>永久性</strong>反转列表元素</td>
+</tr>
+<tr>
+<td style="text-align:center">enumerate(sequence[,start=0])</td>
+<td style="text-align:center">将可遍历的对象组合为一个索引序列，多用于for循环当中</td>
+</tr>
+</tbody>
+</table>
+<h2 id="统计相关"><a class="markdownIt-Anchor" href="#统计相关"></a> 统计相关</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.count(x)</td>
+<td style="text-align:center">统计列表中x元素的个数</td>
+</tr>
+</tbody>
+</table>
+<h1 id="组合数据类型的处理"><a class="markdownIt-Anchor" href="#组合数据类型的处理"></a> 组合数据类型的处理</h1>
+<h2 id="集合类型"><a class="markdownIt-Anchor" href="#集合类型"></a> 集合类型</h2>
+<ul>
+<li>集合的特点：无序不重复</li>
+<li>集合的操作：<code>并：S|T</code>or<code>S.union(T)</code>，<code>差：S-T</code>or<code>S.difference(T)</code>，<code>交：S&amp;T</code>or<code>S.intersection(T)</code>，<code>补：S^T</code>，<code>判断子集：&lt;=或&lt;</code>，<code>判断包含：&gt;=或&gt;</code></li>
+<li>增强操作符：<code>s|=T</code>等。</li>
+</ul>
+<h3 id="声明集合"><a class="markdownIt-Anchor" href="#声明集合"></a> 声明集合</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">set1 = set()		<span class="comment">#只能用此方法创建空集合</span></span><br><span class="line">set2 = &#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">7</span>&#125;		<span class="comment">#set2 = &#123;&#125;不是集合而是字典类型</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">字典：&#123;key:value,key:value,......&#125;</span></span><br><span class="line"><span class="string">集合：&#123;元素1,元素2,元素3,......&#125;</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="操作集合之增"><a class="markdownIt-Anchor" href="#操作集合之增"></a> 操作集合之增</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">s.add(x)</td>
+<td style="text-align:center">添加一个元素x</td>
+</tr>
+<tr>
+<td style="text-align:center">s.update()</td>
+<td style="text-align:center">添加多个元素</td>
+</tr>
+</tbody>
+</table>
+<h3 id="操作集合之删"><a class="markdownIt-Anchor" href="#操作集合之删"></a> 操作集合之删</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">s.remove()</td>
+<td style="text-align:center">移除x，若不存在，报错（KeyError）</td>
+</tr>
+<tr>
+<td style="text-align:center">s.pop()</td>
+<td style="text-align:center">随机取出一个元素(一般为第一个)，若S为空产生KeyError异常</td>
+</tr>
+<tr>
+<td style="text-align:center">s.clear</td>
+<td style="text-align:center">清楚所有元素</td>
+</tr>
+<tr>
+<td style="text-align:center">s.discard(x)</td>
+<td style="text-align:center">类似remove()  移除x，若不存在，不报错</td>
+</tr>
+</tbody>
+</table>
+<h3 id="操作集合之改"><a class="markdownIt-Anchor" href="#操作集合之改"></a> 操作集合之改</h3>
+<h3 id="处理集合的方法"><a class="markdownIt-Anchor" href="#处理集合的方法"></a> 处理集合的方法</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">S.discard(x)</td>
+<td style="text-align:center">移除x，若不存在，不报错</td>
+</tr>
+<tr>
+<td style="text-align:center">S.clear()</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">S.copy()</td>
+<td style="text-align:center">返回一个副本</td>
+</tr>
+<tr>
+<td style="text-align:center">len(S)</td>
+<td style="text-align:center">返回元素个数</td>
+</tr>
+<tr>
+<td style="text-align:center">x （not）in S</td>
+<td style="text-align:center">判断x是否为S的一个元素</td>
+</tr>
+</tbody>
+</table>
+<h2 id="序列类型"><a class="markdownIt-Anchor" href="#序列类型"></a> 序列类型</h2>
+<ul>
+<li>序列类型可分成：字符串类型，元组类型，列表类型</li>
+<li>序列可理解为可储存任何类型数据的列表，故大部分方法可适用于此（判断是否存在，连接，复制，索引，切片等）</li>
+</ul>
+<h3 id="补充方法"><a class="markdownIt-Anchor" href="#补充方法"></a> 补充方法</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.index(x[,i,j])</td>
+<td style="text-align:center">返回从位置i到位置j第一次出现x的位置</td>
+</tr>
+<tr>
+<td style="text-align:center">s.count(x)</td>
+<td style="text-align:center">返回s序列中出现x的总次数</td>
+</tr>
+</tbody>
+</table>
+<h2 id="元组类型"><a class="markdownIt-Anchor" href="#元组类型"></a> 元组类型</h2>
+<ul>
+<li>定义：可使用（）；也可以不使用，用逗号分开，或tuple()</li>
+<li>创建后就不可以修改</li>
+</ul>
+<p>内置方法<code>tuple.count(x)</code>和<code>tuple.index(x)</code>自行学习</p>
+<h3 id="可迭代类型的拆包与装包"><a class="markdownIt-Anchor" href="#可迭代类型的拆包与装包"></a> 可迭代类型的拆包与装包</h3>
+<p>当出现以下情况会报错：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">t1 = (<span class="number">9</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">7</span>)</span><br><span class="line">x,y = t1</span><br></pre></td></tr></table></figure>
+<p>如下处理即可：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">t1 = (<span class="number">9</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">7</span>)</span><br><span class="line">x,*y,z = t1			<span class="comment">#x = 9, y = [4,6], z = 7</span></span><br><span class="line">x,*y = t1			<span class="comment">#x = 9, y = [4,6,7]</span></span><br><span class="line">*x,y = t1			<span class="comment">#x = [9,4,6], y = 7</span></span><br></pre></td></tr></table></figure>
+<p><code>*</code> 的使用涉及到拆包与装包</p>
+<blockquote>
+<p>给可迭代类型前加上星号（<code>*</code>）可代表将其拆分</p>
+<p>将分散的值赋值给<code>*变量</code>可将其装包赋值给变量</p>
+</blockquote>
+<h2 id="字典类型"><a class="markdownIt-Anchor" href="#字典类型"></a> 字典类型</h2>
+<p>定义：{}或dict()创建：{&lt;键1&gt;:&lt;值1&gt; , &lt;键2&gt;:&lt;值2&gt; , … , &lt;键n&gt;:&lt;值n&gt;}</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dict1 = &#123;&#125;</span><br><span class="line">dict2 = dict()</span><br><span class="line">dict3 = &#123;<span class="string">'ID'</span>:<span class="string">'2020202020202'</span>,<span class="string">'name'</span>:<span class="string">'xiaohong'</span>,<span class="string">'age'</span>:<span class="number">18</span>&#125;</span><br><span class="line">dict4 = dict([(<span class="string">'name'</span>,<span class="string">'lucky'</span>),(<span class="string">'age'</span>,<span class="number">18</span>),(<span class="number">1</span>,<span class="number">2</span>)])</span><br></pre></td></tr></table></figure>
+<h3 id="增加与更改元素"><a class="markdownIt-Anchor" href="#增加与更改元素"></a> 增加与更改元素</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 格式： dict5[key] = value</span></span><br><span class="line"><span class="comment"># 有key则更改值，无key则增加元素</span></span><br><span class="line">dict5 = &#123;&#125;</span><br><span class="line">dict5[<span class="string">'brand'</span>] = <span class="string">'huawei'</span>	<span class="comment">#增加</span></span><br><span class="line">dict5[<span class="string">'brand'</span>] = <span class="string">'mi'</span>		<span class="comment">#更改</span></span><br></pre></td></tr></table></figure>
+<h3 id="字典的查找判断"><a class="markdownIt-Anchor" href="#字典的查找判断"></a> 字典的查找判断</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># dict1[key] 和 dict1.get(key) 均可以返回key对应的值</span></span><br><span class="line"><span class="comment"># 推荐dict1.get(key) 因为前者找不到key是会报错 后者会返回 None</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># in 可用于字典中的判断存在操作 用于判断元素有没有在字典的key中出现</span></span><br><span class="line">dict1 = &#123;<span class="string">'brand'</span>:<span class="string">'huawei'</span>,<span class="string">'name'</span>:<span class="string">'xiaohong'</span>&#125;</span><br><span class="line">print(<span class="string">'brand'</span> <span class="keyword">in</span> dict1)</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">d.items()</td>
+<td style="text-align:center">将字典转为列表包含元组的形式</td>
+</tr>
+<tr>
+<td style="text-align:center">d.keys()</td>
+<td style="text-align:center">查找字典的键，可以用for in 遍历</td>
+</tr>
+<tr>
+<td style="text-align:center">d.values()</td>
+<td style="text-align:center">查找字典的值，可以用for in 遍历</td>
+</tr>
+<tr>
+<td style="text-align:center">d.get(k[,default])</td>
+<td style="text-align:center">返回字典中键k对应的值(找不到返回default)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="字典中的删除"><a class="markdownIt-Anchor" href="#字典中的删除"></a> 字典中的删除</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">del dict1[key]</td>
+<td style="text-align:center">删除键为key的一对键值</td>
+</tr>
+<tr>
+<td style="text-align:center">d.pop(key[,default])</td>
+<td style="text-align:center">根据key删除键值对，返回值（若无）为键的值（默认值）</td>
+</tr>
+<tr>
+<td style="text-align:center">d.popitem()</td>
+<td style="text-align:center">随机删键值对（一般是从末尾删），以元组类型返回被删除的键值对</td>
+</tr>
+<tr>
+<td style="text-align:center">clear()</td>
+<td style="text-align:center">同列表中的clear()，清空</td>
+</tr>
+</tbody>
+</table>
+<h3 id="字典中的其他内置函数"><a class="markdownIt-Anchor" href="#字典中的其他内置函数"></a> 字典中的其他内置函数</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">len(d)</td>
+<td style="text-align:center">返回字典中元素的个数</td>
+</tr>
+<tr>
+<td style="text-align:center">d1.update(d2)</td>
+<td style="text-align:center">将d2更新到d1中（合并：重key则以d2为准）</td>
+</tr>
+<tr>
+<td style="text-align:center">dict.fromkeys(seq[,value])</td>
+<td style="text-align:center">创建一个新字典，以序列 seq 中元素做字典的键，value 为字典所有键对应的初始值。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="其他函数"><a class="markdownIt-Anchor" href="#其他函数"></a> 其他函数</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名</th>
+<th style="text-align:center">功能</th>
+<th style="text-align:center">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">eval(‘string’)</td>
+<td style="text-align:center">去掉最外侧引号</td>
+<td style="text-align:center">eval(‘1  +  3’)  ==&gt;  4</td>
 </tr>
 </tbody>
 </table>
@@ -415,173 +665,6 @@ function activateLightMode(){
 <td style="text-align:center">pow(x,y[,z])</td>
 <td style="text-align:center">( x ** y ) % z</td>
 <td style="text-align:center">pow(3,pow(3,99),10000)  ==  4587</td>
-</tr>
-</tbody>
-</table>
-<h1 id="组合数据类型的处理"><a class="markdownIt-Anchor" href="#组合数据类型的处理"></a> 组合数据类型的处理</h1>
-<h2 id="集合类型"><a class="markdownIt-Anchor" href="#集合类型"></a> 集合类型</h2>
-<ul>
-<li>集合的操作：<code>并：S|T</code>，<code>差：S-T</code>，<code>交：S&amp;T</code>，<code>补：S^T</code>，<code>判断子集：&lt;=或&lt;</code>，<code>判断包含：&gt;=或&gt;</code></li>
-<li>增强操作符：<code>s|=T</code>等。</li>
-</ul>
-<h3 id="处理集合的方法"><a class="markdownIt-Anchor" href="#处理集合的方法"></a> 处理集合的方法</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">方法</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">S.add(x)</td>
-<td style="text-align:center">将x添加到S</td>
-</tr>
-<tr>
-<td style="text-align:center">S.discard(x)</td>
-<td style="text-align:center">移除x，若不存在，不报错</td>
-</tr>
-<tr>
-<td style="text-align:center">S.remove(x)</td>
-<td style="text-align:center">移除x，若不存在，报错（KeyError）</td>
-</tr>
-<tr>
-<td style="text-align:center">S.clear()</td>
-<td style="text-align:center">清楚所有元素</td>
-</tr>
-<tr>
-<td style="text-align:center">S.pop()</td>
-<td style="text-align:center">随机取出一个元素，若S为空产生KeyError异常</td>
-</tr>
-<tr>
-<td style="text-align:center">S.copy()</td>
-<td style="text-align:center">返回一个副本</td>
-</tr>
-<tr>
-<td style="text-align:center">len(S)</td>
-<td style="text-align:center">返回元素个数</td>
-</tr>
-<tr>
-<td style="text-align:center">x （not）in S</td>
-<td style="text-align:center">判断x是否为S的一个元素</td>
-</tr>
-<tr>
-<td style="text-align:center">set()</td>
-<td style="text-align:center">强制转换为集合类型</td>
-</tr>
-</tbody>
-</table>
-<h2 id="序列类型"><a class="markdownIt-Anchor" href="#序列类型"></a> 序列类型</h2>
-<ul>
-<li>序列类型可分成：字符串类型，元组类型，列表类型</li>
-<li>序列可理解为可储存任何类型数据的列表，故大部分方法可适用于此（判断是否存在，连接，复制，索引，切片等）</li>
-</ul>
-<h3 id="补充方法"><a class="markdownIt-Anchor" href="#补充方法"></a> 补充方法</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">方法</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">.index(x[,i,j])</td>
-<td style="text-align:center">返回从位置i到位置j第一次出现x的位置</td>
-</tr>
-<tr>
-<td style="text-align:center">s.count(x)</td>
-<td style="text-align:center">返回s序列中出现x的总次数</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-<h2 id="元组类型"><a class="markdownIt-Anchor" href="#元组类型"></a> 元组类型</h2>
-<ul>
-<li>定义：可使用（）；也可以不使用，用逗号分开，或tuple()</li>
-<li>创建后就不可以修改</li>
-</ul>
-<h2 id="字典类型"><a class="markdownIt-Anchor" href="#字典类型"></a> 字典类型</h2>
-<p>定义：{}或dict()创建：{&lt;键1&gt;:&lt;值1&gt; , &lt;键2&gt;:&lt;值2&gt; , … , &lt;键n&gt;:&lt;值n&gt;}</p>
-<p><u>通过[]索引键来查找值</u></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">方法</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">d.keys()</td>
-<td style="text-align:center">查找字典的键，可以用for in 遍历</td>
-</tr>
-<tr>
-<td style="text-align:center">d.values()</td>
-<td style="text-align:center">查找字典的值，可以用for in 遍历</td>
-</tr>
-<tr>
-<td style="text-align:center">d.get(k)</td>
-<td style="text-align:center">返回字典中键k对应的值</td>
-</tr>
-<tr>
-<td style="text-align:center">d.pop(k)</td>
-<td style="text-align:center">取出字典中键k对应的值</td>
-</tr>
-<tr>
-<td style="text-align:center">d.popitem()</td>
-<td style="text-align:center">随机取出字典中的键值对，以元组类型返回</td>
-</tr>
-<tr>
-<td style="text-align:center">len(d)</td>
-<td style="text-align:center">返回字典中元素的个数</td>
-</tr>
-<tr>
-<td style="text-align:center">d.clear()</td>
-<td style="text-align:center">清除字典中的元素</td>
-</tr>
-</tbody>
-</table>
-<h1 id="其他函数"><a class="markdownIt-Anchor" href="#其他函数"></a> 其他函数</h1>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">函数名</th>
-<th style="text-align:center">功能</th>
-<th style="text-align:center">实例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">eval(‘string’)</td>
-<td style="text-align:center">去掉最外侧引号</td>
-<td style="text-align:center">eval(‘1  +  3’)  ==&gt;  4</td>
-</tr>
-<tr>
-<td style="text-align:center">print(’{:.2f}’.format©)</td>
-<td style="text-align:center">将C的值格式化输出</td>
-<td style="text-align:center">print(’{:.2f}C’.format(34.2395)) ==&gt;  34.23C</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
 </tr>
 </tbody>
 </table>
