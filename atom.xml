@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sirius0v0.gitee.io/"/>
-  <updated>2020-10-14T11:31:24.689Z</updated>
+  <updated>2020-10-14T11:41:51.739Z</updated>
   <id>https://sirius0v0.gitee.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>PythonNoteGlobal</title>
+    <title>Python学习_全局变量与局部变量</title>
     <link href="https://sirius0v0.gitee.io/2020/10/14/PythonNoteGlobal/"/>
     <id>https://sirius0v0.gitee.io/2020/10/14/PythonNoteGlobal/</id>
     <published>2020-10-14T09:43:19.000Z</published>
-    <updated>2020-10-14T11:31:24.689Z</updated>
+    <updated>2020-10-14T11:41:51.739Z</updated>
     
     <content type="html"><![CDATA[<h1 id="全局变量与局部变量"><a class="markdownIt-Anchor" href="#全局变量与局部变量"></a> 全局变量与局部变量</h1><h2 id="几点要注意的事项"><a class="markdownIt-Anchor" href="#几点要注意的事项"></a> 几点要注意的事项</h2><ol><li><p>声明在函数体外的变量为全局变量，声明在函数体内的变量为局部变量；</p></li><li><p>在函数体内可以对全局变量进行 <strong>访问</strong>，但不可以进行 <strong>修改</strong>；</p></li><li><p>若要对全局变量进行修改，需要在函数体开头加上<code>global 变量</code>；</p></li><li><p>全局变量如果是<strong>不可变</strong>，在函数中进行修改需要<code>global</code>声明，若全局变量为<strong>可变</strong>，则不需要进行<code>global</code>声明</p><p><strong>可不可变取决于内存地址是否变化，修改后地址发生改变则为不可变</strong></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">'asdf'</span></span><br><span class="line">print(id(string))<span class="comment"># 55731648</span></span><br><span class="line">string += <span class="string">'zzzz'</span></span><br><span class="line">print(id(string))<span class="comment">#55746992</span></span><br><span class="line"><span class="comment">#字符串内存地址发生改变，为不可变</span></span><br><span class="line"></span><br><span class="line">list1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">print(id(list1))<span class="comment"># 55730248</span></span><br><span class="line">list1.append(<span class="number">6</span>)</span><br><span class="line">print(id(list1))<span class="comment"># 55730248</span></span><br><span class="line"><span class="comment">#列表内存地址未发生改变，为可变</span></span><br></pre></td></tr></table></figure></li></ol>]]></content>
     
