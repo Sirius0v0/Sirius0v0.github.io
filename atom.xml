@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sirius0v0.gitee.io/"/>
-  <updated>2020-10-19T15:46:24.414Z</updated>
+  <updated>2020-10-20T05:15:56.315Z</updated>
   <id>https://sirius0v0.gitee.io/</id>
   
   <author>
@@ -17,13 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>PythonNoteOS</title>
+    <link href="https://sirius0v0.gitee.io/2020/10/20/PythonNoteOS/"/>
+    <id>https://sirius0v0.gitee.io/2020/10/20/PythonNoteOS/</id>
+    <published>2020-10-20T05:02:14.000Z</published>
+    <updated>2020-10-20T05:15:56.315Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="os模块函数介绍"><a class="markdownIt-Anchor" href="#os模块函数介绍"></a> OS模块函数介绍</h1><h2 id="ospathdirname__file__"><a class="markdownIt-Anchor" href="#ospathdirname__file__"></a> <code>os.path.dirname(__file)__</code></h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;os模块函数介绍&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#os模块函数介绍&quot;&gt;&lt;/a&gt; OS模块函数介绍&lt;/h1&gt;
+&lt;h2 id=&quot;ospathdirname__file__&quot;&gt;&lt;a class=&quot;markdownIt-Ancho
+      
+    
+    </summary>
+    
+    
+      <category term="学习笔记" scheme="https://Sirius0v0.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Python" scheme="https://Sirius0v0.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Python/"/>
+    
+    
+      <category term="Python" scheme="https://Sirius0v0.gitee.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python学习_文件</title>
     <link href="https://sirius0v0.gitee.io/2020/10/19/PythonNoteFile/"/>
     <id>https://sirius0v0.gitee.io/2020/10/19/PythonNoteFile/</id>
     <published>2020-10-19T15:44:31.000Z</published>
-    <updated>2020-10-19T15:46:24.414Z</updated>
+    <updated>2020-10-20T05:12:31.599Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="文件操作"><a class="markdownIt-Anchor" href="#文件操作"></a> 文件操作</h1><h2 id="open函数"><a class="markdownIt-Anchor" href="#open函数"></a> open函数</h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="文件操作"><a class="markdownIt-Anchor" href="#文件操作"></a> 文件操作</h1><h2 id="open函数"><a class="markdownIt-Anchor" href="#open函数"></a> open函数</h2><p><code>open(file, mode='r', buffering=None, encoding=None, errors=None, newline=None, closefd=True)</code></p><ul><li>mode</li></ul><table><thead><tr><th>选项</th><th>r</th><th>w</th><th>rb</th><th>wb</th></tr></thead><tbody><tr><td><strong>含义</strong></td><td>read（读）</td><td>write（写）</td><td>read_binary（二进制的读）</td><td>write（二进制的写）</td></tr><tr><td><strong>选项</strong></td><td><strong>a</strong></td><td><strong>t</strong></td><td></td><td></td></tr><tr><td><strong>含义</strong></td><td>追加</td><td>文本模式（默认）</td><td></td><td></td></tr></tbody></table><ul><li>用<code>with open(r'C:\img.jpg', 'rb') as stream:</code>可以帮助我们自动释放资源；</li></ul><h2 id="读取文件"><a class="markdownIt-Anchor" href="#读取文件"></a> 读取文件</h2><ul><li><code>file.read()</code>：读取所有内容</li><li><code>file.readable()</code>：判断文件是否可读</li><li><code>file.readline()</code>：读取一行内容</li><li><code>file.readlines()</code>：读取多行并保存在列表中</li></ul><h2 id="追加和写操作"><a class="markdownIt-Anchor" href="#追加和写操作"></a> 追加和写操作</h2><ul><li><code>file.writable()</code>：判断文件是否可写</li><li><code>file.write()</code>：写内容，没有换行</li><li><code>file.writelines(iterable)</code>：写内容，需要自己在字符串后加上换行进行换行操作</li></ul><blockquote><p>以’w’模式写文件，会首先清空文件里的内容；以’a’模式写文件，表示对该文件追加内容</p></blockquote><h2 id="文件的复制"><a class="markdownIt-Anchor" href="#文件的复制"></a> 文件的复制</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">r'C:\p1\girl.jpg'</span>, <span class="string">'rb'</span>) <span class="keyword">as</span> stream:</span><br><span class="line">    con = stream.read()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">r'C:\p2\girl.jpg'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> wstream:</span><br><span class="line">        wstream.write(con)</span><br></pre></td></tr></table></figure><h1 id="相对路径与绝对路径"><a class="markdownIt-Anchor" href="#相对路径与绝对路径"></a> 相对路径与绝对路径</h1><ul><li>绝对路径：<code>D:\blog\source\_posts</code>；</li><li>相对路径：相对于当前文件的路径<ul><li><code>images/girl.jpg</code> 找与当前文件同级的images里的文件</li><li><code>../images/girl.jpg</code> 在与上一级同级的文件images里找文件</li></ul></li></ul>]]></content>
     
     <summary type="html">
     
