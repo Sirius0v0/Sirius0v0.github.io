@@ -4,11 +4,65 @@
   
     
     <entry>
+      <title>Python学习_面向对象</title>
+      <link href="/2020/10/22/PythonNoteOO/"/>
+      <url>/2020/10/22/PythonNoteOO/</url>
+      
+        <content type="html"><![CDATA[<h1 id="面向对象简介"><a class="markdownIt-Anchor" href="#面向对象简介"></a> 面向对象简介</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python_生成器和迭代器</title>
+      <link href="/2020/10/21/PythonNoteGenerator/"/>
+      <url>/2020/10/21/PythonNoteGenerator/</url>
+      
+        <content type="html"><![CDATA[<h1 id="生成器"><a class="markdownIt-Anchor" href="#生成器"></a> 生成器</h1><p>生成器可以节省内存！</p><h2 id="得到生成器的方式"><a class="markdownIt-Anchor" href="#得到生成器的方式"></a> 得到生成器的方式</h2><h3 id="通过列表推导式得到"><a class="markdownIt-Anchor" href="#通过列表推导式得到"></a> 通过列表推导式得到</h3><p>用小括号括起来得到生成器</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">g = (x*<span class="number">3</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">100</span>))</span><br><span class="line">print(type(g))</span><br><span class="line"></span><br><span class="line">&gt;&gt; &lt;<span class="class"><span class="keyword">class</span> '<span class="title">generator</span>'&gt;</span></span><br></pre></td></tr></table></figure><h3 id="借助函数得到"><a class="markdownIt-Anchor" href="#借助函数得到"></a> 借助函数得到</h3><ul><li>函数中使用<code>yield</code>关键字得到生成器，通过<code>return</code>返回报错内容</li></ul><p>举例生成斐波那契数列并演示报错提示</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span><span class="params">(length)</span>:</span></span><br><span class="line">    a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">    n = <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> n &lt; length:</span><br><span class="line">        <span class="keyword">yield</span> a</span><br><span class="line">        a, b = b, a+b</span><br><span class="line">        n += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"没有更多的元素！"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">g = fib(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">11</span>):</span><br><span class="line">    print(g.__next__())</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&gt;&gt; <span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="number">13</span></span><br><span class="line"><span class="number">21</span></span><br><span class="line"><span class="number">34</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"E:/Desktop/python/pythonpractice/Generator.py"</span>, line <span class="number">14</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    print(g.__next__())</span><br><span class="line">StopIteration: 没有更多的元素！</span><br></pre></td></tr></table></figure><h2 id="得到元素的方法"><a class="markdownIt-Anchor" href="#得到元素的方法"></a> 得到元素的方法</h2><h3 id="__next__"><a class="markdownIt-Anchor" href="#__next__"></a> <code>.__next__()</code></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">g = (x*<span class="number">3</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">100</span>))</span><br><span class="line">print(g.__next__())</span><br><span class="line">print(g.__next__())</span><br><span class="line">print(g.__next__())</span><br><span class="line">print(g.__next__())</span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="number">0</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">9</span></span><br></pre></td></tr></table></figure><h3 id="nextgenerator函数"><a class="markdownIt-Anchor" href="#nextgenerator函数"></a> <code>next(generator)</code>函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">g = (x*<span class="number">3</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">100</span>))</span><br><span class="line">print(g.__next__())</span><br><span class="line">print(next(g))</span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="number">0</span></span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure><h3 id="sendvalue"><a class="markdownIt-Anchor" href="#sendvalue"></a> <code>.send(value)</code></h3><ul><li>第一次必须发送<code>None</code></li><li><code>.send(value)</code>向每次生成器调用中传值</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gen</span><span class="params">()</span>:</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> i &lt; <span class="number">5</span>:</span><br><span class="line">        temp = <span class="keyword">yield</span> i</span><br><span class="line">        print(<span class="string">'temp:'</span>,temp)</span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"没有更多的数据"</span></span><br><span class="line"></span><br><span class="line">g = gen()</span><br><span class="line">print(g.send(<span class="literal">None</span>))</span><br><span class="line">print(g.send(<span class="string">'嘻嘻'</span>))</span><br><span class="line">print(g.send(<span class="string">'哈哈'</span>))</span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="number">0</span></span><br><span class="line">temp: 嘻嘻</span><br><span class="line"><span class="number">1</span></span><br><span class="line">temp: 哈哈</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure><h2 id="应用"><a class="markdownIt-Anchor" href="#应用"></a> 应用</h2><p>携程</p><h1 id="迭代器"><a class="markdownIt-Anchor" href="#迭代器"></a> 迭代器</h1><ul><li>可以被<code>next()</code>函数调用并不断返回下一个值的对象成为迭代器：Iterator</li><li>可迭代的 <strong>不一定</strong> 就是迭代器（e.g. list是可迭代，但不是迭代器）</li><li>可以使用<code>iter()</code>将可迭代类型转换为迭代器</li><li>生成器属于迭代器的一种</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python学习_推导式</title>
       <link href="/2020/10/21/PythonNote%E6%8E%A8%E5%AF%BC%E5%BC%8F/"/>
       <url>/2020/10/21/PythonNote%E6%8E%A8%E5%AF%BC%E5%BC%8F/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="列表推导式"><a class="markdownIt-Anchor" href="#列表推导式"></a> 列表推导式</h1><h2 id="格式"><a class="markdownIt-Anchor" href="#格式"></a> 格式</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[表达式 <span class="keyword">for</span> 变量 <span class="keyword">in</span> 旧列表]</span><br><span class="line">[表达式 <span class="keyword">for</span> 变量 <span class="keyword">in</span> 旧列表 <span class="keyword">if</span> 条件]</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">names = [<span class="string">'tom'</span>,<span class="string">'lily'</span>,<span class="string">'abs'</span>,<span class="string">'jack'</span>,<span class="string">'steven'</span>,<span class="string">'jenny'</span>,<span class="string">'danny'</span>]</span><br><span class="line">result = [name.capitalize() <span class="keyword">for</span> name <span class="keyword">in</span> names <span class="keyword">if</span> len(name)&gt;<span class="number">3</span>]</span><br><span class="line">print(result)</span><br><span class="line"></span><br><span class="line">&gt;&gt; [<span class="string">'Lily'</span>, <span class="string">'Jack'</span>, <span class="string">'Steven'</span>, <span class="string">'Jenny'</span>, <span class="string">'Danny'</span>]</span><br></pre></td></tr></table></figure><ul><li>元组、字典也有类似用法</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 嵌套的用法</span></span><br><span class="line"></span><br><span class="line">list1 = [(x, y) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">4</span>) <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span> <span class="keyword">for</span> y <span class="keyword">in</span> range(<span class="number">4</span>) <span class="keyword">if</span> y % <span class="number">2</span> != <span class="number">0</span>]</span><br><span class="line">print(list1)</span><br><span class="line"></span><br><span class="line">&gt;&gt; [(<span class="number">0</span>, <span class="number">1</span>), (<span class="number">0</span>, <span class="number">3</span>), (<span class="number">2</span>, <span class="number">1</span>), (<span class="number">2</span>, <span class="number">3</span>)]</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 字典推导式</span></span><br><span class="line">dict1 = &#123;<span class="string">'name'</span>:<span class="string">'Tom'</span>,<span class="string">'salary'</span>:<span class="number">4000</span>&#125;</span><br><span class="line">dict2 = &#123;<span class="string">'name'</span>:<span class="string">'Lucy'</span>,<span class="string">'salary'</span>:<span class="number">5000</span>&#125;</span><br><span class="line">dict3 = &#123;<span class="string">'name'</span>:<span class="string">'Jack'</span>,<span class="string">'salary'</span>:<span class="number">4500</span>&#125;</span><br><span class="line">dict4 = &#123;<span class="string">'name'</span>:<span class="string">'Lily'</span>,<span class="string">'salary'</span>:<span class="number">7000</span>&#125;</span><br><span class="line">list1 = [dict1, dict2, dict3, dict4]</span><br><span class="line"></span><br><span class="line">newlist = [employee[<span class="string">'salary'</span>]+<span class="number">200</span> <span class="keyword">if</span> employee[<span class="string">'salary'</span>]&gt;<span class="number">5000</span> <span class="keyword">else</span> employee[<span class="string">'salary'</span>]+<span class="number">500</span> <span class="keyword">for</span> employee <span class="keyword">in</span> list1]</span><br><span class="line">print(newlist)</span><br><span class="line"></span><br><span class="line">&gt;&gt; [<span class="number">4500</span>, <span class="number">5500</span>, <span class="number">5000</span>, <span class="number">7200</span>]</span><br></pre></td></tr></table></figure><h1 id="集合推导式"><a class="markdownIt-Anchor" href="#集合推导式"></a> 集合推导式</h1><h2 id="格式-2"><a class="markdownIt-Anchor" href="#格式-2"></a> 格式</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;表达式 <span class="keyword">for</span> 变量 <span class="keyword">in</span> 旧列表&#125;</span><br><span class="line">&#123;表达式 <span class="keyword">for</span> 变量 <span class="keyword">in</span> 旧列表 <span class="keyword">if</span> 条件&#125;</span><br></pre></td></tr></table></figure><ul><li>与列表推导式一致，多了一个去重的功能</li></ul><h1 id="字典推导式"><a class="markdownIt-Anchor" href="#字典推导式"></a> 字典推导式</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dict1 = &#123;<span class="string">'a'</span>:<span class="string">'A'</span>,<span class="string">'b'</span>:<span class="string">'B'</span>,<span class="string">'c'</span>:<span class="string">'C'</span>,<span class="string">'d'</span>:<span class="string">'C'</span>&#125;</span><br><span class="line">newdict = &#123;value:key <span class="keyword">for</span> key, value <span class="keyword">in</span> dict1.items()&#125;</span><br><span class="line">print(newdict)</span><br><span class="line"></span><br><span class="line">&gt;&gt; &#123;<span class="string">'A'</span>: <span class="string">'a'</span>, <span class="string">'B'</span>: <span class="string">'b'</span>, <span class="string">'C'</span>: <span class="string">'d'</span>&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -317,9 +371,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>about</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -328,9 +382,9 @@
     
     
     <entry>
-      <title>about</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -350,9 +404,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
