@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Matlab在制导控制的应用（线性控制）</title>
+      <link href="/2021/03/19/matlab-control-2/"/>
+      <url>/2021/03/19/matlab-control-2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="matlab在制导控制中的应用线性系统模型控制"><a class="markdownIt-Anchor" href="#matlab在制导控制中的应用线性系统模型控制"></a> Matlab在制导控制中的应用——线性系统模型控制</h1><h2 id="线性系统描述方法"><a class="markdownIt-Anchor" href="#线性系统描述方法"></a> 线性系统描述方法</h2><h3 id="线性连续系统"><a class="markdownIt-Anchor" href="#线性连续系统"></a> 线性连续系统</h3><h4 id="传递函数描述形式"><a class="markdownIt-Anchor" href="#传递函数描述形式"></a> 传递函数描述形式</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sys = tf(num, den);</span><br><span class="line">sys = tf(num, den, <span class="string">'InputDelay'</span>,tao);<span class="comment">% 附加延迟环节</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 从系统中提取分子分母多项式</span></span><br><span class="line">[num, den] = tfdata(sys)<span class="comment">% num，den 默认元胞数组</span></span><br><span class="line">[num, den] = tfdata(sys,<span class="string">'v'</span>)<span class="comment">% 对于SISO添加参数得到数值向量</span></span><br></pre></td></tr></table></figure><h4 id="零极点描述形式"><a class="markdownIt-Anchor" href="#零极点描述形式"></a> 零极点描述形式</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sys = zpk(z, p, k)<span class="comment">% z零点 p极点 k增益</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 从系统中提取零极点和增益</span></span><br><span class="line">[z,p,k] = zpkdata(sys);</span><br><span class="line">[z,p,k] = zpkdata(sys,<span class="string">'v'</span>);</span><br></pre></td></tr></table></figure><h4 id="非标准形式"><a class="markdownIt-Anchor" href="#非标准形式"></a> 非标准形式</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">s = tf(<span class="string">'s'</span>)<span class="comment">% 定义传递函数算子</span></span><br><span class="line">sys =( s^<span class="number">2</span>+s*<span class="number">4</span><span class="number">-17</span>)/(s^<span class="number">6</span>-s^<span class="number">2</span>+s<span class="number">-18</span>)</span><br><span class="line"></span><br><span class="line">&gt;&gt; sys =</span><br><span class="line"> </span><br><span class="line">    s^<span class="number">2</span> + <span class="number">4</span> s - <span class="number">17</span></span><br><span class="line">  ------------------</span><br><span class="line">  s^<span class="number">6</span> - s^<span class="number">2</span> + s - <span class="number">18</span></span><br><span class="line"> </span><br><span class="line">Continuous-time transfer <span class="function"><span class="keyword">function</span>.</span></span><br></pre></td></tr></table></figure><h4 id="状态空间形式"><a class="markdownIt-Anchor" href="#状态空间形式"></a> 状态空间形式</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sys = ss(A, B, C, D);</span><br><span class="line"></span><br><span class="line"><span class="comment">% 从系统中提取状态空间矩阵</span></span><br><span class="line">[A, B, C, D] = ssdata(sys);</span><br></pre></td></tr></table></figure><h3 id="线性离散时间系统"><a class="markdownIt-Anchor" href="#线性离散时间系统"></a> 线性离散时间系统</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%% 传递函数描述</span></span><br><span class="line">sysd = tf(num, den, Ts)<span class="comment">% Ts为采样周期</span></span><br><span class="line">sysd = zpk(z,p,k,Ts);</span><br><span class="line"></span><br><span class="line">[num, den, Ts] = tfdata(sysd)</span><br><span class="line">[z,p,k,Ts] = zpkdata(sysd)</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 状态空间描述</span></span><br><span class="line">sysd = ss(A, B, C, D, Ts);</span><br><span class="line"></span><br><span class="line">[A, B, C, D, Ts] = ssdata(sysd)</span><br></pre></td></tr></table></figure><h3 id="线性系统的互相转换"><a class="markdownIt-Anchor" href="#线性系统的互相转换"></a> 线性系统的互相转换</h3><ul><li>连续系统之间的</li></ul><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[num, den] = ss2tf(A,B,C,D)</span><br><span class="line">[z,p,k] = ss2zp(A,B,C,D)</span><br><span class="line">[num, den] = zp2tf(z,p,k)</span><br><span class="line">[A,B,C,D] = zp2ss(z,p,k)</span><br><span class="line">[z,p,k] = tf2zp(num, den)</span><br><span class="line">[A,B,C,D] = tf2ss(num, den)</span><br></pre></td></tr></table></figure><ul><li>连续与离散系统之间的</li></ul><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">sysd = c2d(sysc,Ts)</span><br><span class="line">sysd = c2d(sysc,Ts,method)<span class="comment">% 指定转换方法</span></span><br><span class="line"><span class="comment">% 'zoh'零阶保持器（默认）</span></span><br><span class="line"><span class="comment">% 'impulse'脉冲不变变换</span></span><br><span class="line"><span class="comment">% 'matched'零极点匹配变换</span></span><br><span class="line"><span class="comment">% 'foh'一阶保持器</span></span><br><span class="line"><span class="comment">% 'tustin'双线性变换</span></span><br><span class="line"></span><br><span class="line">sysc = d2c(sysd);</span><br><span class="line">sysc = d2c(sysd,method);</span><br><span class="line"><span class="comment">% 'zoh'</span></span><br><span class="line"><span class="comment">% 'foh'</span></span><br><span class="line"><span class="comment">% 'tustin'</span></span><br><span class="line"><span class="comment">% 'matched'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 离散到离散的转换，用于采样时间的重新设置</span></span><br><span class="line">sysd2 = d2d(sysd,Ts)</span><br><span class="line">sysd2 = d2d(sysd,Ts,method)</span><br><span class="line"><span class="comment">% 'zoh'</span></span><br><span class="line"><span class="comment">% 'tustin'</span></span><br></pre></td></tr></table></figure><h3 id="线性系统的连接处理"><a class="markdownIt-Anchor" href="#线性系统的连接处理"></a> 线性系统的连接处理</h3><h4 id="串联"><a class="markdownIt-Anchor" href="#串联"></a> 串联</h4><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 对于简单（SISO）串联</span></span><br><span class="line">sys = sys1 * sys2</span><br><span class="line">sys = series(sys1, sys2)</span><br><span class="line">[num, den] = series(num1, den1, num2, den2);<span class="comment">% 直接求取串联后的多项式</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 对于较为复杂的串联</span></span><br><span class="line">sys = series(sys1, sys2, output1, input2)</span><br><span class="line"><span class="comment">% 例子</span></span><br><span class="line"><span class="comment">% sys1 5I4O; sys2 3I2O; sys1第二端口与第四端口分别与sys2第三端口和第一端口相连</span></span><br><span class="line">output1 = [<span class="number">2</span> <span class="number">4</span>];</span><br><span class="line">input2 = [<span class="number">3</span> <span class="number">1</span>];</span><br><span class="line">sys = series(sys1, sys2, output1, input2);</span><br></pre></td></tr></table></figure><p><img src="https://img.imgdb.cn/item/6054186b524f85ce29ecb21d.png" alt="较为复杂的MIMO串联关系示意图" /></p><h4 id="并联"><a class="markdownIt-Anchor" href="#并联"></a> 并联</h4><h4 id="反馈"><a class="markdownIt-Anchor" href="#反馈"></a> 反馈</h4><h2 id="线性控制系统特性分析"><a class="markdownIt-Anchor" href="#线性控制系统特性分析"></a> 线性控制系统特性分析</h2><h3 id="稳定性分析"><a class="markdownIt-Anchor" href="#稳定性分析"></a> 稳定性分析</h3><h3 id="可控可观性分析"><a class="markdownIt-Anchor" href="#可控可观性分析"></a> 可控可观性分析</h3><h3 id="线性系统规范分解"><a class="markdownIt-Anchor" href="#线性系统规范分解"></a> 线性系统规范分解</h3><h2 id="线性控制系统时域分析"><a class="markdownIt-Anchor" href="#线性控制系统时域分析"></a> 线性控制系统时域分析</h2><h2 id="线性控制系统根轨迹分析"><a class="markdownIt-Anchor" href="#线性控制系统根轨迹分析"></a> 线性控制系统根轨迹分析</h2><h2 id="线性控制系统频域分析"><a class="markdownIt-Anchor" href="#线性控制系统频域分析"></a> 线性控制系统频域分析</h2><h2 id="线性定常系统分析工具linearsystemanalyzer"><a class="markdownIt-Anchor" href="#线性定常系统分析工具linearsystemanalyzer"></a> 线性定常系统分析工具LinearSystemAnalyzer</h2><h2 id="siso控制系统辅助设计工具controlsystemdesigner"><a class="markdownIt-Anchor" href="#siso控制系统辅助设计工具controlsystemdesigner"></a> SISO控制系统辅助设计工具controlSystemDesigner</h2><h2 id="一个案例"><a class="markdownIt-Anchor" href="#一个案例"></a> 一个案例</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+          <category> MATLAB </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MATLAB </tag>
+            
+            <tag> 控制学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Matlab在制导控制的应用（科学计算）</title>
       <link href="/2021/03/13/matlab-control/"/>
       <url>/2021/03/13/matlab-control/</url>
@@ -508,17 +537,6 @@
     
     
     <entry>
-      <title>about</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>分类</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -530,9 +548,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>留言板</title>
+      <link href="/comments/index.html"/>
+      <url>/comments/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -552,9 +570,20 @@
     
     
     <entry>
-      <title>留言板</title>
-      <link href="/comments/index.html"/>
-      <url>/comments/index.html</url>
+      <title>about</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
